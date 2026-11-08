@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    background-color: #080808;
+  }
+
+  body {
+    background-color: #080808;
+    color: #e5e5e5;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #080808;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@layer components {
+  /* Minimalist Video-Accurate Cards */
+  .ref-card {
+    background: rgba(18, 18, 18, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .ref-card:hover {
+    border-color: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+  }
+
+  .ref-card-subtle {
+    background: rgba(14, 14, 14, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 1.25rem;
+  }
+
+  /* Solid White Reference Button */
+  .ref-btn-white {
+    background: #ffffff;
+    color: #000000;
+    font-weight: 600;
+    border-radius: 0.875rem;
+    transition: all 0.2s ease;
+  }
+  .ref-btn-white:hover {
+    background: #e2e8f0;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+  }
+
+  /* Dark Outline Reference Button */
+  .ref-btn-outline {
+    background: rgba(255, 255, 255, 0.04);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    font-weight: 500;
+    border-radius: 0.875rem;
+    transition: all 0.2s ease;
+  }
+  .ref-btn-outline:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+  }
+
+  /* Pill Navigation */
+  .ref-navbar {
+    background: rgba(12, 12, 12, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Background precision grid exactly matching video frame 004 */
+.bg-ref-grid {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+}
